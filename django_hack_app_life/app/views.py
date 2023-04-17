@@ -35,13 +35,13 @@ class ItemViewPostGet(views.APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# Реализация через query-parameters
 class ItemViewGetQuery(generics.ListAPIView):
     serializer_class = MyModelSerializer
     template_name = 'app/index.html'
     context_object_name = 'post'
 
     def get_queryset(self):
-        # print(self.kwargs.get())
         queryset = Userdata.objects.none()
         inn = self.request.query_params.get('inn', None)
         nomer_zajavki = self.request.query_params.get('nomer_zajavki', None)
