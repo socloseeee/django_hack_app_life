@@ -1,4 +1,7 @@
 .PHONY: install
-
 install:
- pip install -r requirements.txt
+    pip install -r requirements.txt &&
+    python manage.py runserver &&
+    echo "Все работает, даун."
+
+.DEFAULT_GOAL := install
