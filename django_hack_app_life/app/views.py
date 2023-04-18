@@ -30,7 +30,7 @@ class ItemViewPostGet(views.APIView):
     def post(self, request):
         serializer = MyModelSerializer(data=request.data)
         if serializer.is_valid():
-            request.session["inn"] = serializer.data.get("inn")
+            request.session["inn"] = serializer.data.get("inn") # в параметры сессии присваиваем данные
             request.session["nomer_zajavki"] = serializer.data.get("nomer_zajavki")
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -40,7 +40,6 @@ class ItemViewGetQuery(generics.ListAPIView):
     serializer_class = MyModelSerializer
     template_name = 'app/index.html'
     context_object_name = 'post'
-
     def get_queryset(self):
         queryset = Userdata.objects.none()
         inn = self.request.query_params.get('inn', None)
