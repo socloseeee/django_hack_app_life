@@ -8,13 +8,6 @@ from transliterate import translit
 
 warnings.simplefilter("ignore")
 
-# def checkTableExists(dbcon, tablename):
-#     listOfTables = dbcon.cursor().execute("""
-#         SELECT name
-#         FROM sqlite_master
-#         WHERE type='table' AND name='{0}'
-#         """.format(tablename))
-#     return True if listOfTables else False
 
 cnn = None
 db_file: str = '../db.sqlite3'
@@ -35,8 +28,6 @@ try:
             print(df.head(10), '\n')
             df.columns = map(lambda x: translit(x.replace('"', '').replace('№ ', '').replace('<span style="color: red;padding:2px">', '').replace('</span>', ''), language_code='ru', reversed=True), df.columns)
             df = df.loc[:, ~df.columns.str.contains('^Zajavki MZ-BDZ')]
-            # add_or_create = 'append' if checkTableExists(cnn, table_name) else 'create'
-            # print(add_or_create)
             print(checkTableExists(cnn, table_name))
             df.to_sql(name=table_name, con=cnn, if_exists='append')
             sql = "Select * From Userdata"
