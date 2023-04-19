@@ -1,6 +1,6 @@
 #  Hackathon Application Life Case
 
-![img_1](https://user-images.githubusercontent.com/65871712/233199278-28f86fd5-a879-4918-aabb-71e71f4c49b3.png)
+![image](https://user-images.githubusercontent.com/65871712/233199839-f5f6f4c4-ca25-4ebb-8ac3-ed538a340e74.png)
 
 [![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
