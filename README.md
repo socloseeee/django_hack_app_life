@@ -1,13 +1,11 @@
 #  Hackathon Application Life Case
-> ## Backend Stack
+> Backend Stack
 [![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Backend(Django)](https://img.shields.io/badge/BACKEND(Django)-white?style=for-the-badge&logo=django&logoColor=black)](https://www.djangoproject.com/)
 [![SQL](https://img.shields.io/badge/SQL-grey?style=for-the-badge&logo=SQLite&logoColor=white)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/sql.html)
 [![Pandas](https://img.shields.io/badge/Pandas-orange?style=for-the-badge&logo=PAndas&logoColor=white)](https://pandas.pydata.org/)
 
-> ## Frontend Stack
-> 
-
+> Frontend Stack
 [![Vue](https://img.shields.io/badge/VUE-green?style=for-the-badge&logo=Vue.js&logoColor=white)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white)](https://www.djangoproject.com/)
 [![SQL](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=TypeScript&logoColor=white)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/sql.html)
