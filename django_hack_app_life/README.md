@@ -12,4 +12,4 @@
 
 > Good job! Backend server is successfully launched.
 
-> To run front u should read reqirements from [frontend repo](https://github.com/neketli/order-lifecycle/tree/master/frontend)) :)
+> To run front u should read reqirements from [frontend repo](https://github.com/neketli/order-lifecycle/tree/master/frontend) :)
