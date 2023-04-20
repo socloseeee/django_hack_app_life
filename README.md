@@ -13,7 +13,8 @@
 [![SQL](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=TypeScript&logoColor=white)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/sql.html)
 [![Pandas](https://img.shields.io/badge/HTML-red?style=for-the-badge&logo=HTML5&logoColor=white)](https://pandas.pydata.org/)
 
-> __About__: The solution should collect information from files in such a way that we can clearly see which way the application goes on different dates. By entering the application number, TIN or all together, the manager should see what status it was in for the selected period of time.
+### About 
+The solution should collect information from files in such a way that we can clearly see which way the application goes on different dates. By entering the application number, TIN or all together, the manager should see what status it was in for the selected period of time.
 
 
 > All installation instructions are inside the [next directory](https://github.com/socloseeee/django_hack_app_life/tree/master/django_hack_app_life)
