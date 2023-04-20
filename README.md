@@ -19,7 +19,7 @@ The solution should collect information from files in such a way that we can cle
 
 > All installation instructions are inside the [next directory](https://github.com/socloseeee/django_hack_app_life/tree/master/django_hack_app_life)
 
-> Result([Frontend repo](https://github.com/neketli/order-lifecycle/tree/master/frontend)):
+### Result([Frontend repo](https://github.com/neketli/order-lifecycle/tree/master/frontend)):
 
 ![image](https://user-images.githubusercontent.com/65871712/233215681-66f9f113-895d-4a30-83a5-197d9a99c3c5.png)
 
