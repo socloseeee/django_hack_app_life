@@ -1,7 +1,9 @@
 #  Hackathon Application Life Case
 
 [![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Python(Django)](https://img.shields.io/badge/BACKEND(Django)-white?style=for-the-badge&logo=django&logoColor=black)](https://www.djangoproject.com/)
+[![Backend(Django)](https://img.shields.io/badge/BACKEND(Django)-white?style=for-the-badge&logo=django&logoColor=black)](https://www.djangoproject.com/)
+[![SQL](https://img.shields.io/badge/SQL-grey?style=for-the-badge&logo=django&logoColor=black)](https://www.djangoproject.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-orange?style=for-the-badge&logo=django&logoColor=black)](https://www.djangoproject.com/)
 
 > All installation instructions are inside the [next directory](https://github.com/socloseeee/django_hack_app_life/tree/master/django_hack_app_life)
 
