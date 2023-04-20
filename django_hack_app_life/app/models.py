@@ -12,11 +12,11 @@ class Userdata(models.Model):
     id = models.IntegerField(primary_key=True)
     ues_arm_field = models.TextField(db_column='UES (ARM)', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     ltts = models.TextField(db_column='LTTs', blank=True, null=True)  # Field name made lowercase.
-    nomer_zajavki = models.IntegerField(db_column='Nomer zajavki', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    nomer_zajavki = models.IntegerField(db_column='Nomer_zajavki', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     nomer_paketnoj_zajavki_mpz = models.FloatField(db_column='Nomer paketnoj zajavki MPZ', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     vneshnij_istochnik_zajavki = models.FloatField(db_column='Vneshnij istochnik zajavki', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     nomer_zajavki_iz_vneshnego_istochnika = models.FloatField(db_column='Nomer zajavki iz vneshnego istochnika', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    klient_field = models.TextField(db_column='Klient*', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
+    klient_field = models.TextField(db_column='Klient', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     inn = models.FloatField(db_column='INN', blank=True, null=True)  # Field name made lowercase.
     nls = models.FloatField(db_column='NLS', blank=True, null=True)  # Field name made lowercase.
     region = models.TextField(db_column='Region', blank=True, null=True)  # Field name made lowercase.
