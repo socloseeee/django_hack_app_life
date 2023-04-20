@@ -8,10 +8,10 @@
 
 ### Frontend Stack
 
-[![Vue](https://img.shields.io/badge/VUE-green?style=for-the-badge&logo=Vue.js&logoColor=white)](https://www.python.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white)](https://www.djangoproject.com/)
-[![SQL](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=TypeScript&logoColor=white)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/sql.html)
-[![Pandas](https://img.shields.io/badge/HTML-red?style=for-the-badge&logo=HTML5&logoColor=white)](https://pandas.pydata.org/)
+[![Vue](https://img.shields.io/badge/VUE-green?style=for-the-badge&logo=Vue.js&logoColor=white)](https://ru.vuejs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white)](https://www.javascript.com/)
+[![Typescript](https://img.shields.io/badge/Typescript-blue?style=for-the-badge&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org/)
+[![HTML](https://img.shields.io/badge/HTML-red?style=for-the-badge&logo=HTML5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ### About 
 The solution should collect information from files in such a way that we can clearly see which way the application goes on different dates. By entering the application number, TIN or all together, the manager should see what status it was in for the selected period of time.
