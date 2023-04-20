@@ -5,6 +5,10 @@
 [![SQL](https://img.shields.io/badge/SQL-grey?style=for-the-badge&logo=django&logoColor=white)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/sql.html)
 [![Pandas](https://img.shields.io/badge/Pandas-orange?style=for-the-badge&logo=django&logoColor=white)](https://pandas.pydata.org/)
 
+> __About__
+> The solution should collect information from files in such a way that we can clearly see which way the application goes on different dates. By entering the application number, TIN or all together, the manager should see what status it was in for the selected period of time.
+
+
 > All installation instructions are inside the [next directory](https://github.com/socloseeee/django_hack_app_life/tree/master/django_hack_app_life)
 
 > Result([Frontend repo](https://github.com/neketli/order-lifecycle/tree/master/frontend)):
