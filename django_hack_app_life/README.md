@@ -6,9 +6,6 @@
 ### Swagger ui:
 ![image](https://user-images.githubusercontent.com/65871712/233787033-1b4baf21-42de-48f2-8a1a-3f3c0aba7b6f.png)
 
-### Model:
-![image](https://user-images.githubusercontent.com/65871712/233786959-a9a1d3d8-98fd-411b-b699-a9ea8d2ecd37.png)
-
 
 ## Requirements:
 [![Ubuntu](https://img.shields.io/badge/ubuntu-orange?style=for-the-badge&logo=ubuntu&logoColor=white)](https://www.python.org/)
