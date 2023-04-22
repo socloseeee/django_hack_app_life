@@ -1,0 +1,7 @@
+paths:
+  /my-api/:
+    get:
+      summary: Get some data
+      responses:
+        '200':
+          description: OK

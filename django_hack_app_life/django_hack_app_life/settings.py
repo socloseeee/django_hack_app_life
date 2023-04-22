@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'app.apps.AppsConfig',
-    'corsheaders',
+    'rest_framework',
+    'rest_framework_swagger',
+    'drf_yasg',
+    'corsheaders'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True    # ['http://localhost:8000']

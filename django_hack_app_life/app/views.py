@@ -4,13 +4,16 @@ from .serializers import MyModelSerializer
 from rest_framework import views
 from rest_framework.response import Response
 from django.db.models.query import QuerySet
-# from django.core.cache import cache
 from django.db.models import Count
-# from django.db.models.expressions import RawSQL
+
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+
 
 
 # Реализация через query-parameters
 class ItemViewGetQuery(views.APIView):
+    """Output of the list of applications by INN/Application."""
     def get_queryset(self) -> QuerySet:
 
         inn = self.request.query_params.get('inn', None)
@@ -21,19 +24,48 @@ class ItemViewGetQuery(views.APIView):
         queryset = Userdata.objects.values(
             'date', 'klient_field', 'inn', 'nomer_zajavki', 'status'
         ).annotate(num=Count('id')).filter(num=1)
-        # cache.set('my_data', queryset, timeout=3600*24)
-        # print(queryset)
-        if inn and nomer_zajavki:
-            queryset = queryset.filter(inn=inn) & queryset.filter(nomer_zajavki=nomer_zajavki)
-        else:
-            if inn:
-                queryset = Userdata.objects.filter(inn=inn)
-            elif nomer_zajavki:
-                queryset = queryset.filter(nomer_zajavki=nomer_zajavki)
-        queryset = queryset.filter(date__gte=start_date, date__lte=end_date)
-        queryset = queryset.order_by('-date')
+        if self.request.query_params:
+            if inn and nomer_zajavki:
+                queryset = queryset.filter(inn=inn) & queryset.filter(nomer_zajavki=nomer_zajavki)
+            else:
+                if inn:
+                    queryset = queryset.filter(inn=inn)
+                elif nomer_zajavki:
+                    queryset = queryset.filter(nomer_zajavki=nomer_zajavki)
+            queryset = queryset.filter(date__gte=start_date, date__lte=end_date)
+            queryset = queryset.order_by('-date')
         return queryset
 
+    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter('inn', openapi.IN_QUERY, description="INN (E.g.: 7707049388)",
+                              type=openapi.TYPE_INTEGER),
+            openapi.Parameter('nomer_zajavki', openapi.IN_QUERY, description="Application number (E.g.: 50252265)",
+                              type=openapi.TYPE_INTEGER),
+            openapi.Parameter('start_date', openapi.IN_QUERY, description="Start_date (E.g.: 09.03.2023)",
+                              type=openapi.TYPE_STRING),
+            openapi.Parameter('end_date', openapi.IN_QUERY, description="End_date (E.g.: 13.03.2023)",
+                              type=openapi.TYPE_STRING),
+        ],
+        responses={
+            200: openapi.Response(
+                description='Successful response',
+                schema=MyModelSerializer,
+                examples={
+                    'application/json': {
+                        'date': '09.03.23',
+                        'inn': 7707049388,
+                        'nomer_zajavki': 50252265,
+                        'start_date': '09.03.23',
+                        'end_date': '13.03.23',
+                    },
+                }
+            ),
+            400: openapi.Response(description='Bad Request'),
+            403: openapi.Response(description='Forbidden'),
+            404: openapi.Response(description='Not Found'),
+        },
+    )
     def get(self, request):
         queryset = self.get_queryset()
         serializer = MyModelSerializer(queryset, many=True)
