@@ -3,6 +3,9 @@
 ### Query parameters:
 ![img_1](https://user-images.githubusercontent.com/65871712/233504679-dfdf20fc-35ae-4508-b577-d014346b0a44.png)
 
+### Swagger ui:
+![image](https://user-images.githubusercontent.com/65871712/233787033-1b4baf21-42de-48f2-8a1a-3f3c0aba7b6f.png)
+
 ### Model:
 ![image](https://user-images.githubusercontent.com/65871712/233786959-a9a1d3d8-98fd-411b-b699-a9ea8d2ecd37.png)
 
