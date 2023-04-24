@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@nuxtjs/device": "^3.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/tailwindcss": "^6.1.3",
+    "@vueuse/core": "^9.5.0",
+    "@vueuse/nuxt": "^9.5.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.28.0",
+    "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.5",
+    "@vuepic/vue-datepicker": "^4.2.2",
+    "axios": "^1.1.3",
+    "font-awesome": "^4.7.0",
+    "lint-staged": "^13.2.1",
+    "vue3-toastify": "^0.1.5"
+  }
+}
