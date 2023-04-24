@@ -5,13 +5,9 @@
 
 ## Endpoints<a name = "endpoints"></a>:
 
-### Query parameters:
-![img_1](https://user-images.githubusercontent.com/65871712/233504679-dfdf20fc-35ae-4508-b577-d014346b0a44.png)
 ![image](https://user-images.githubusercontent.com/65871712/233931344-6ecde23c-a3ea-49dd-b673-b7198e894f51.png)
 
 
-### Swagger ui:
-![image](https://user-images.githubusercontent.com/65871712/233787033-1b4baf21-42de-48f2-8a1a-3f3c0aba7b6f.png)
 ![image](https://user-images.githubusercontent.com/65871712/233931453-ae06c037-6aee-41e2-8892-d18377f4a4bf.png)
 
 
