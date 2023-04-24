@@ -13,7 +13,7 @@
 
 ## Requirements <a name = "installing"></a>:
 [![Ubuntu](https://img.shields.io/badge/ubuntu-orange?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/?!)
-[![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python3&logoColor=white)](https://ubuntu.com/?!)
+[![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python&logoColor=white)](https://ubuntu.com/?!)
 > Clone repo/download from git
 
 > cd ../downloaded_repo
