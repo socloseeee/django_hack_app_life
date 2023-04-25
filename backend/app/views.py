@@ -35,7 +35,7 @@ class ItemViewGetQuery(views.APIView):
                     queryset = queryset.filter(nomer_zajavki=nomer_zajavki)
             queryset = queryset.filter(date__gte=start_date, date__lte=end_date)
             queryset = queryset.order_by('-date')
-        return queryset if queryset else rest_framework.exceptions.NotFound
+        return queryset
 
     @swagger_auto_schema(
         manual_parameters=[
@@ -68,7 +68,7 @@ class ItemViewGetQuery(views.APIView):
     def get(self, request):
         queryset = self.get_queryset()
         serializer = MyModelSerializer(queryset, many=True)
-        return Response(serializer.data) if serializer.data else Response(serializer.errors)
+        return Response(serializer.data)
 
 
 def pageNotFound(request, exception) -> HttpResponse:

@@ -1,38 +1,31 @@
-from django.test import TestCase, Client
-from django.urls import reverse
-from rest_framework import status
-from rest_framework.test import APITestCase, APIClient
-from .models import Userdata
-from .serializers import MyModelSerializer
+from rest_framework.test import APITestCase, APIRequestFactory
+from app.models import Userdata
+from .views import ItemViewGetQuery
 
-# initialize the APIClient app
-client = APIClient()
+class TestItemViewGetQuery(APITestCase):
+    def setUp(self):
+        self.factory = APIRequestFactory()
+        self.view = ItemViewGetQuery.as_view()
+        self.userdata = Userdata.objects.create(
+            date='2022-01-01', klient_field='test', inn=7707049388,
+            nomer_zajavki=50252265, status='success'
+        )
+    def test_get_queryset(self):
+        request = self.factory.get('', {
+            'inn': 7707049388, 'nomer_zajavki': 50252265,
+            'start_date': '2022-01-01', 'end_date': '2022-01-31'
+        })
+        response = self.view(request)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data), 1)
+        self.assertEqual(response.data[0]['date'], '2022-01-01')
+        self.assertEqual(response.data[0]['klient_field'], 'test')
+        self.assertEqual(response.data[0]['inn'], 7707049388)
+        self.assertEqual(response.data[0]['nomer_zajavki'], 50252265)
+        self.assertEqual(response.data[0]['status'], 'success')
 
-
-class UserdataTest(APITestCase):
-    def setUp(self) -> None:
-        body = {
-            'inn': 7707049388,
-            'nomer_zajavki': 50252265,
-            'start_date': "09.03.2023",
-            'end_date=': "03.03.2023"
-        }
-
-    def test_get_query_with_inn_and_application(self):
-        # get API response
-        response = client.get(reverse('my-object-list', kwargs=self.body))
-        # get data from db
-        my_objects = Userdata.objects.filter(inn=self.body['inn']) & Userdata.objects.filter(nomer_zajavki=self.body['nomer_zajavki'])
-        serializer = MyModelSerializer(my_objects, many=True)
-        self.assertEqual(response.data, serializer.data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-
-    def test_get_query(self):
-        # get API response
-        response = client.get(reverse('my-object-detail', kwargs={'pk': self.my_object.pk}))
-        # get data from db
-        my_object = Userdata.objects.all()
-        serializer = MyModelSerializer(my_object)
-        self.assertEqual(response.data, serializer.data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-
+    def test_get_queryset_without_params(self):
+        request = self.factory.get('')
+        response = self.view(request)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data), 1)
